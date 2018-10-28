@@ -1,5 +1,19 @@
 @extends('layouts.app')
 
+@push('css')
+<style>
+    .carousel-caption > p{
+        color: red;
+        font-weight: bold;
+    }
+
+    .carousel-caption > h3{
+        color: black;
+        font-weight: bold;
+
+    }
+</style>
+@endpush
 @section('contenido')
     <header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -24,7 +38,7 @@
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('{{asset('img/4.jpeg')}}')">
+                <div class="carousel-item" style="background-image: url('{{asset('img/18.jpg')}}')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Aislamiento</h3>
                         <p>Se ha perdido la interacción personal.</p>
@@ -45,13 +59,13 @@
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="my-4">Welcome to Modern Business</h1>
+        <h1 class="my-4">INFLUENCIA DE LAS REDES SOCIALES</h1>
 
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Redes Sociales</h4>
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
                     </div>
@@ -62,7 +76,7 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Historia</h4>
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
                     </div>
@@ -73,7 +87,7 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Ventajas y Desventajas</h4>
                     <div class="card-body">
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
                     </div>
@@ -91,10 +105,10 @@
         <div class="row">
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="{{asset('img/5.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project One</a>
+                            <a href="#">Tipos de redes sociales</a>
                         </h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
                     </div>
@@ -102,10 +116,10 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="{{asset('img/6.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Two</a>
+                            <a href="#">Tipos de App's</a>
                         </h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                     </div>
@@ -113,45 +127,12 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="{{asset('img/7.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Three</a>
+                            <a href="#">Adicciones</a>
                         </h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Four</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Five</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Six</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
                     </div>
                 </div>
             </div>
@@ -175,7 +156,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+                <img class="img-fluid rounded" src="{{asset('img/9.jpeg')}}" alt="">
             </div>
         </div>
         <!-- /.row -->
