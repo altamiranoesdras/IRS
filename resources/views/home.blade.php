@@ -100,15 +100,15 @@
         <!-- /.row -->
 
         <!-- Portfolio Section -->
-        <h2>Portfolio Heading</h2>
+        <h2>Portfolio</h2>
 
         <div class="row">
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="{{asset('img/5.jpeg')}}" alt=""></a>
+                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/5.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Tipos de redes sociales</a>
+                            <a href="{{route('portafolio',1)}}">Tipos de redes sociales</a>
                         </h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
                     </div>
@@ -116,7 +116,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="{{asset('img/6.jpeg')}}" alt=""></a>
+                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/6.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">Tipos de App's</a>
@@ -127,10 +127,10 @@
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="{{asset('img/7.jpeg')}}" alt=""></a>
+                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/7.jpeg')}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Adicciones</a>
+                            <a href="{{route('portafolio',1)}}">Adicciones</a>
                         </h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
                     </div>
