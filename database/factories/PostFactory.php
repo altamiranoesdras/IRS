@@ -7,6 +7,6 @@ $factory->define(\App\Post::class, function (Faker $faker) {
         'titulo' => $faker->title,
         'extracto' => $faker->text,
         'cuerpo' => $faker->paragraph,
-        'imagen' => \Faker\Provider\Image::image(storage_path() . '/app/public/post', 600, 350, 'food', false),
+        'imagen' => \Faker\Provider\Image::image(storage_path() . '/app/public/posts', 600, 350, 'technics', false),
     ];
 });

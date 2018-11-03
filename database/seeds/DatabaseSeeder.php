@@ -11,13 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::deleteDirectory('post');
+        Storage::deleteDirectory('posts');
         Storage::deleteDirectory('contenidos');
 
-        Storage::makeDirectory('post');
+        Storage::makeDirectory('posts');
         Storage::makeDirectory('contenidos');
 
-        factory(\App\Post::class, 20)->create();
-        factory(\App\Contenido::class, 20)->create();
+        factory(\App\Post::class, 10 )->create();
+        factory(\App\Contenido::class, 10 )->create();
     }
 }

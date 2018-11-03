@@ -10,12 +10,9 @@
         <small>Subheading</small>
       </h1>
 
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="{{route('home')}}">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Contact</li>
-      </ol>
+      @component('layouts.partials.breadcrumb')
+        Contactanos
+      @endcomponent
 
       <!-- Content Row -->
       <div class="row">

@@ -10,12 +10,9 @@
         {{--</small>--}}
     </h1>
 
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Post</li>
-    </ol>
+    @component('layouts.partials.breadcrumb')
+        Post
+    @endcomponent
 
     <div class="row">
 

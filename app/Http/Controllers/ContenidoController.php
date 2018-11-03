@@ -16,9 +16,10 @@ class ContenidoController extends Controller
 //        $this->middleware('gues')
     }
 
-    public function index($portafolio)
+    public function index()
     {
-        return view('portafolio');
+        $contenidos = Contenido::paginate(5);
+        return view('contenidos.index',compact('contenidos'));
     }
 
     public function show(Contenido $contenido)

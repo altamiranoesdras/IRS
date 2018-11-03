@@ -9,12 +9,9 @@
         <small>Subheading</small>
       </h1>
 
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
-        </li>
-        <li class="breadcrumb-item active">About</li>
-      </ol>
+      @component('layouts.partials.breadcrumb')
+        Acerca de
+      @endcomponent
 
       <!-- Intro Content -->
       <div class="row">
