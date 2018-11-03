@@ -63,39 +63,19 @@
 
         <!-- Marketing Icons Section -->
         <div class="row">
+            @foreach(\App\Post::limit(3)->get() as $post)
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Redes Sociales</h4>
+                    <h4 class="card-header">{{$post->titulo}}</h4>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                        <p class="card-text">{{$post->extracto}}</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <a href="{{route('post.show',$post->id)}}" class="btn btn-primary">Leer mas</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <h4 class="card-header">Historia</h4>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card h-100">
-                    <h4 class="card-header">Ventajas y Desventajas</h4>
-                    <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
+                @endforeach
         </div>
         <!-- /.row -->
 
@@ -103,39 +83,21 @@
         <h2>Portfolio</h2>
 
         <div class="row">
-            <div class="col-lg-4 col-sm-6 portfolio-item">
+            @foreach(\App\Contenido::limit(3)->get() as $port)
+                <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/5.jpeg')}}" alt=""></a>
+                    <a href="{{route('contenido.show',$port->id)}}"><img class="card-img-top" src="{{asset('storage/contenido/'.$port->imagen)}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="{{route('portafolio',1)}}">Tipos de redes sociales</a>
+                            <a href="{{route('contenido.show',$port->id)}}">{{$port->titulo}}</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">
+                            {{$port->extracto}}
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/6.jpeg')}}" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Tipos de App's</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="{{route('portafolio',1)}}"><img class="card-img-top" src="{{asset('img/7.jpeg')}}" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="{{route('portafolio',1)}}">Adicciones</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- /.row -->
 

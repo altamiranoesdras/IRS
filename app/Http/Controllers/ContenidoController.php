@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Contenido;
 use Illuminate\Http\Request;
 
-class PortafolioController extends Controller
+class ContenidoController extends Controller
 {
 
     /**
@@ -18,5 +19,10 @@ class PortafolioController extends Controller
     public function index($portafolio)
     {
         return view('portafolio');
+    }
+
+    public function show(Contenido $contenido)
+    {
+        return view('contenido',compact('contenido'));
     }
 }

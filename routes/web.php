@@ -14,4 +14,5 @@
 Route::view('/','home')->name('home');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
-Route::get('portafolio/{portafolio}','PortafolioController@index')->name('portafolio');
+Route::get('contenido/{contenido}','ContenidoController@show')->name('contenido.show');
+Route::get('post/{post}','PostController@show')->name('post.show');

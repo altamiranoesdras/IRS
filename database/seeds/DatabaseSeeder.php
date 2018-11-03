@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        Storage::deleteDirectory('post');
+        Storage::deleteDirectory('contenidos');
+
+        Storage::makeDirectory('post');
+        Storage::makeDirectory('contenidos');
+
+        factory(\App\Post::class, 20)->create();
+        factory(\App\Contenido::class, 20)->create();
     }
 }
