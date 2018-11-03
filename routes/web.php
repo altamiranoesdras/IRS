@@ -17,3 +17,4 @@ Route::view('contact','contact')->name('contact');
 Route::get('contenido/{contenido}','ContenidoController@show')->name('contenido.show');
 Route::get('post/{post}','PostController@show')->name('post.show');
 Route::get('contenidos','ContenidoController@index')->name('contenidos');
+Route::get('posts','PostController@index')->name('posts');

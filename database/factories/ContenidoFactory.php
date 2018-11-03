@@ -5,7 +5,7 @@ use Faker\Provider\Image;
 
 $factory->define(\App\Contenido::class, function (Faker $faker) {
     return [
-        'titulo' => $faker->title,
+        'titulo' => $faker->word,
         'extracto' => $faker->text,
         'cuerpo' => $faker->paragraph,
         'imagen' => Image::image(storage_path() . '/app/public/contenidos', 600, 350, 'technics', false),

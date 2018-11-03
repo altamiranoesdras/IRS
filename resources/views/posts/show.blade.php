@@ -37,17 +37,17 @@
             <hr>
 
             <!-- Comments Form -->
-            {{--<div class="card my-4">--}}
-                {{--<h5 class="card-header">Leave a Comment:</h5>--}}
-                {{--<div class="card-body">--}}
-                    {{--<form>--}}
-                        {{--<div class="form-group">--}}
-                            {{--<textarea class="form-control" rows="3"></textarea>--}}
-                        {{--</div>--}}
-                        {{--<button type="submit" class="btn btn-primary">Submit</button>--}}
-                    {{--</form>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="card my-4">
+                <h5 class="card-header">Comentario:</h5>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" name="comentario"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
 
             {{--<!-- Single Comment -->--}}
             {{--<div class="media mb-4">--}}

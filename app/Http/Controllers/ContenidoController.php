@@ -24,6 +24,6 @@ class ContenidoController extends Controller
 
     public function show(Contenido $contenido)
     {
-        return view('contenido',compact('contenido'));
+        return view('contenidos.show',compact('contenido'));
     }
 }

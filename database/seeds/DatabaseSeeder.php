@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         Storage::makeDirectory('posts');
         Storage::makeDirectory('contenidos');
 
-        factory(\App\Post::class, 10 )->create();
-        factory(\App\Contenido::class, 10 )->create();
+        factory(\App\Post::class, 30)->create();
+        factory(\App\Contenido::class, 30)->create();
     }
 }
