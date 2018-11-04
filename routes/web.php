@@ -11,7 +11,10 @@
 |
 */
 
-Route::view('/','home')->name('home');
+Auth::routes();
+
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
 Route::get('contenido/{contenido}','ContenidoController@show')->name('contenido.show');
