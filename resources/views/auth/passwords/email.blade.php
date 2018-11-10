@@ -1,7 +1,16 @@
 @extends('layouts.app')
 
-@section('content')
+@section('contenido')
 <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">{{ __('Reset Password') }}
+        {{--<small>Subheading</small>--}}
+    </h1>
+
+    @component('layouts.partials.breadcrumb')
+        {{ __('Reset Password') }}
+    @endcomponent
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -43,5 +52,13 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 @endsection

@@ -15,7 +15,7 @@
         @endcomponent
 
 
-        @foreach($posts as $post)
+        @forelse ($posts as $post)
         <!-- Blog Post -->
             <div class="card mb-4">
                 <div class="card-body">
@@ -41,7 +41,15 @@
                     {{--<a href="#">Start Bootstrap</a>--}}
                 </div>
             </div>
-        @endforeach
+        @empty
+            <div class="card" style="margin-bottom: 17rem">
+                <div class="card-body">
+                    <h1 class="text-danger text-center text-uppercase">
+                        No hay ningun post
+                    </h1>
+                </div>
+            </div>
+        @endforelse
 
         <div class="pagination justify-content-center">
             <!-- Pagination -->

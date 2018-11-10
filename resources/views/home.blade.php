@@ -63,7 +63,7 @@
 
         <!-- Marketing Icons Section -->
         <div class="row">
-            @foreach(\App\Contenido::limit(3)->get() as $cont)
+            @forelse( \App\Contenido::limit(3)->get() as $cont)
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
                     <h4 class="card-header">{{$cont->titulo}}</h4>
@@ -75,7 +75,17 @@
                     </div>
                 </div>
             </div>
-                @endforeach
+                @empty
+                    <div class="col-sm-12">
+                        <div class="card" style="margin-bottom: 2rem">
+                            <div class="card-body">
+                                <h1 class="text-danger text-center text-uppercase">
+                                    No hay ningun contenido
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                @endforelse
         </div>
         <!-- /.row -->
 
@@ -83,7 +93,7 @@
         <h2>Posts</h2>
 
         <div class="row">
-            @foreach(\App\Post::limit(3)->get() as $post)
+            @forelse(\App\Post::limit(3)->get() as $post)
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     <a href="{{route('post.show',$post->id)}}"><img class="card-img-top" src="{{asset('storage/posts/'.$post->imagen)}}" alt=""></a>
@@ -97,7 +107,17 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+                <div class="col-sm-12">
+                    <div class="card" style="margin-bottom: 2rem">
+                        <div class="card-body">
+                            <h1 class="text-danger text-center text-uppercase">
+                                No hay ningun post
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            @endforelse
         </div>
         <!-- /.row -->
 
