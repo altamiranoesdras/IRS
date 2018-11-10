@@ -10,6 +10,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    CONST USER = 'user';
+    CONST EDITOR = 'editor';
+    CONST ADMIN = 'admin';
+
     /**
      * The attributes that are mass assignable.
      *

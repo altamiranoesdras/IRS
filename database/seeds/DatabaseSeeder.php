@@ -11,6 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        //Usurio admin
+        factory(\App\User::class, 1)->create(['name' => 'Administrador del sistema','email' => 'admin@admin.com','role' => \App\User::ADMIN]);
+
+        //Otros usuarios
+        factory(\App\User::class, 10)->create();
+
+
         Storage::deleteDirectory('posts');
         Storage::deleteDirectory('contenidos');
 
@@ -19,5 +27,7 @@ class DatabaseSeeder extends Seeder
 
         factory(\App\Post::class, 30)->create();
         factory(\App\Contenido::class, 30)->create();
+
+
     }
 }
