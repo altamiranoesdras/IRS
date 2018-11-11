@@ -138,14 +138,12 @@
             <div class="col-lg-6">
                 <img class="img-fluid rounded" src="{{asset('img/9.jpeg')}}" alt="">
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-12 my-3">
                 <a href="https://www.facebook.com/Influencia-de-las-redes-sociales-en-el-rendimiento-acad%C3%A9mico-516038925475226/"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
         <!-- /.row -->
-
-        <hr>
 
         <!-- Call to Action Section -->
         {{--<div class="row mb-4">--}}
