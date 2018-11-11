@@ -70,7 +70,7 @@ class ContenidoController extends Controller
 
         DB::commit();
 
-        flash('Contenido guardaddo con exito')->success();
+        flash('Contenido guardado con éxito')->success();
 
         return redirect(route('contenidos.index'));
 

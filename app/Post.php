@@ -8,7 +8,7 @@ class Post extends Model
 {
     protected $appends = ['img'];
 
-    protected $fillable =['titulo','extracto','cuerpo','imagen'];
+    protected $fillable =['titulo','extracto','cuerpo','imagen','user_id'];
 
     public function getImgAttribute()
     {

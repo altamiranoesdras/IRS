@@ -28,7 +28,7 @@
                         <div class="col-lg-6">
                             <h2 class="card-title">{{$post->titulo}}</h2>
                             <p class="card-text">
-                                {{$post->extracto}}
+                                {!! $post->extracto !!}
                             </p>
                             <a href="{{route('posts.show',$post->id)}}" class="btn btn-primary">
                                 Leer mas
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    Posted on {{$post->created_al}}
+                    Publicado el: {{$post->created_at}}
                     {{--<a href="#">Start Bootstrap</a>--}}
                 </div>
             </div>

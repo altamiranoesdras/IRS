@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Auth;
+use DB;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -25,10 +27,49 @@ class PostController extends Controller
         return view('posts.show',compact('post'));
     }
 
-    public function new()
+    public function create()
     {
-
-        dd('create post');
         return view('posts.create_edit');
+    }
+
+    public function store(Request $request)
+    {
+//        dd($request->all());
+
+        try {
+            DB::beginTransaction();
+
+            if ($request->hasFile('file')){
+                $request->file('file')->store('posts');
+                $img = $request->file('file')->hashName();
+                $request->merge(['imagen' => $img]);
+            }
+
+            $request->merge(['user_id' => Auth::user()->id]);
+            $request->merge(['extracto' => substr($request->cuerpo,0,251).'...']);
+
+            $contenido = Post::create($request->all());
+
+
+        } catch (Exception $exception) {
+            DB::rollBack();
+            $msg = $exception->getMessage();
+
+            if(Auth::user()->isAdmin()){
+                flash('Error: <br>'.$msg)->error()->important();
+            }else{
+                flash('Hubo un error, intente de nuevo')->error();
+            }
+
+            return redirect()->back();
+        }
+
+
+        DB::commit();
+
+        flash('Post guardado con éxito')->success();
+
+        return redirect(route('posts.index'));
+
     }
 }
