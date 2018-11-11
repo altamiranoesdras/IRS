@@ -17,11 +17,11 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <img class="img-fluid" src="{{$contenido->img}}" alt="">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3 class="my-3">Description</h3>
                 <p>
                     {!! $contenido->cuerpo !!}
