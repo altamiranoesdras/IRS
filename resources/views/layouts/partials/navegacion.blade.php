@@ -11,29 +11,58 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">Acerca de</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{route('contenidos')}}">Contenidos</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{route('posts')}}">Posts</a>
-                </li>
+                @guest
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{route('contenidos.index')}}">Contenidos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{route('posts.index')}}">Posts</a>
+                    </li>
+                @else
+                    @if(Auth::user()->isAdmin())
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contenidos
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                                <a class="dropdown-item" href="{{route('contenidos.index')}}">Todos</a>
+                                <a class="dropdown-item" href="{{route('contenidos.create')}}">Nuevo</a>
+                            </div>
+                        </li>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="{{route('contenidos')}}">Contenidos</a>
+                        </li>
+                    @endif
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Post
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                                <a class="dropdown-item" href="{{route('posts.index')}}">Todos</a>
+                                <a class="dropdown-item" href="{{route('posts.index').'?user='.Auth::user()->id}}">Mis Post</a>
+                                <a class="dropdown-item" href="{{route('posts.create')}}">Nuevo</a>
+                            </div>
+                        </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('contact')}}">Contactanos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('register')}}">Registro</a>
-                </li>
                 @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('login')}}">Ingreso</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('register')}}">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('login')}}">Ingreso</a>
+                    </li>
                 @else
-                <li class="nav-item">
-                    <a href="#"class="nav-link" data-toggle="modal" data-target="#modalLogout">
-                        <i class="fa fa-sign-out-alt"></i>
-                        <span class="d-none d-sm-inline">Salir</span>
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a href="#"class="nav-link" data-toggle="modal" data-target="#modalLogout">
+                            <i class="fa fa-sign-out-alt"></i>
+                            <span class="d-none d-sm-inline">Salir</span>
+                        </a>
+                    </li>
                 @endguest
                 {{--<li class="nav-item dropdown">--}}
                     {{--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}

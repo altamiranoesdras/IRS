@@ -17,7 +17,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::view('about','about')->name('about');
 Route::view('contact','contact')->name('contact');
-Route::get('contenido/{contenido}','ContenidoController@show')->name('contenido.show');
-Route::get('post/{post}','PostController@show')->name('post.show');
-Route::get('contenidos','ContenidoController@index')->name('contenidos');
-Route::get('posts','PostController@index')->name('posts');
+
+Route::resource('posts','PostController');
+Route::resource('contenidos','ContenidoController');

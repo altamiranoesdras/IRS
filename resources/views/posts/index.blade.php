@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <a href="{{route('post.show',$post->id)}}">
+                            <a href="{{route('posts.show',$post->id)}}">
                                 <img class="img-fluid rounded" src="{{$post->img}}" alt="">
                             </a>
                         </div>
@@ -30,7 +30,7 @@
                             <p class="card-text">
                                 {{$post->extracto}}
                             </p>
-                            <a href="{{route('post.show',$post->id)}}" class="btn btn-primary">
+                            <a href="{{route('posts.show',$post->id)}}" class="btn btn-primary">
                                 Leer mas
                             </a>
                         </div>

@@ -18,16 +18,16 @@
             @forelse($contenidos as $contenido)
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
-                        <a href="{{route('contenido.show',$contenido->id)}}">
+                        <a href="{{route('contenidos.show',$contenido->id)}}">
                             <img class="card-img-top" src="{{$contenido->img}}" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="{{route('contenido.show',$contenido->id)}}">
+                                <a href="{{route('contenidos.show',$contenido->id)}}">
                                     {{$contenido->titulo}}
                                 </a>
                             </h4>
                             <p class="card-text">
-                                {{$contenido->extracto}}
+                                {!! $contenido->extracto !!}
                             </p>
                         </div>
                     </div>

@@ -8,8 +8,11 @@ class Contenido extends Model
 {
     protected $appends = ['img'];
 
+    protected $fillable =['titulo','extracto','cuerpo','imagen','user_id'];
+
     public function getImgAttribute()
     {
-        return asset('storage/contenidos/'.$this->imagen);
+        $img = $this->imagen ? asset('storage/contenidos/'.$this->imagen) : asset('img/none.png');
+        return $img;
     }
 }

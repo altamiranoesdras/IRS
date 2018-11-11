@@ -8,8 +8,15 @@ class Post extends Model
 {
     protected $appends = ['img'];
 
+    protected $fillable =['titulo','extracto','cuerpo','imagen'];
+
     public function getImgAttribute()
     {
         return asset('storage/posts/'.$this->imagen);
+    }
+
+    public function scopeDelUser($query,$user)
+    {
+        return $query->where('user_id',$user);
     }
 }

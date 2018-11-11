@@ -71,7 +71,7 @@
                         <p class="card-text">{{$cont->extracto}}</p>
                     </div>
                     <div class="card-footer">
-                        <a href="{{route('contenido.show',$cont->id)}}" class="btn btn-primary">Leer mas</a>
+                        <a href="{{route('contenidos.show',$cont->id)}}" class="btn btn-primary">Leer mas</a>
                     </div>
                 </div>
             </div>
@@ -96,10 +96,10 @@
             @forelse(\App\Post::limit(3)->get() as $post)
                 <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="{{route('post.show',$post->id)}}"><img class="card-img-top" src="{{asset('storage/posts/'.$post->imagen)}}" alt=""></a>
+                    <a href="{{route('posts.show',$post->id)}}"><img class="card-img-top" src="{{asset('storage/posts/'.$post->imagen)}}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="{{route('post.show',$post->id)}}">{{$post->titulo}}</a>
+                            <a href="{{route('posts.show',$post->id)}}">{{$post->titulo}}</a>
                         </h4>
                         <p class="card-text">
                             {{$post->extracto}}
