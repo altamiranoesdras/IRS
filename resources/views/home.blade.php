@@ -140,7 +140,8 @@
             </div>
             <br>
             <div class="col-sm-12 my-3">
-                <a href="https://www.facebook.com/Influencia-de-las-redes-sociales-en-el-rendimiento-acad%C3%A9mico-516038925475226/"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
+                <a href="https://www.facebook.com/Influencia-de-las-redes-sociales-en-el-rendimiento-acad%C3%A9mico-516038925475226/" target="_blank">
+                    <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
