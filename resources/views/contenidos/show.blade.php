@@ -17,11 +17,7 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-6">
-                <img class="img-fluid" src="{{$contenido->img}}" alt="">
-            </div>
-
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <h3 class="my-3">Description</h3>
                 <p>
                     {!! $contenido->cuerpo !!}
@@ -33,6 +29,9 @@
                     {{--<li>Consectetur</li>--}}
                     {{--<li>Adipiscing Elit</li>--}}
                 {{--</ul>--}}
+            </div>
+            <div class="col-sm-4">
+                <img class="img-fluid" src="{{$contenido->img}}" alt="">
             </div>
 
         </div>
@@ -47,9 +46,9 @@
             @php
                 $relacionados =\App\Contenido::all();
 
-                $random = $relacionados->count()>3 ? 4 : $relacionados->count();
+                $random = $relacionados->count()>=4 ? 4 : $relacionados->count();
 
-                $relacionados->random($random);
+                $relacionados = $relacionados->random($random);
 
             @endphp
 
