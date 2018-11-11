@@ -1,6 +1,6 @@
 
 <!-- Navigation -->
-<nav class="navbar  text-white navbar-expand-lg navbar-dark bg-success fixed-top">
+<nav class="navbar  navbar-expand-lg navbar-dark bg-success fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}">
             <b>{{config('app.name')}}</b>
@@ -9,21 +9,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse float-left" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto font-weight-bold" style="color: white !important;">
+            <ul class="navbar-nav ml-auto font-weight-bold" >
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}">Acerca de</a>
+                    <a class="nav-link text-white  text-white " href="{{route('about')}}" >Acerca de</a>
                 </li>
                 @guest
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{route('contenidos.index')}}">Contenidos</a>
+                        <a class="nav-link text-white " href="{{route('contenidos.index')}}">Contenidos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="{{route('posts.index')}}">Posts</a>
+                        <a class="nav-link text-white  " href="{{route('posts.index')}}">Posts</a>
                     </li>
                 @else
                     @if(Auth::user()->isAdmin())
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-white  dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Contenidos
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -33,12 +33,12 @@
                         </li>
                     @else
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{route('contenidos')}}">Contenidos</a>
+                            <a class="nav-link text-white " href="{{route('contenidos')}}">Contenidos</a>
                         </li>
                     @endif
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link text-white  dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Post
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -49,25 +49,25 @@
                         </li>
                 @endif
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('contact')}}">Contactanos</a>
+                    <a class="nav-link text-white " href="{{route('contact')}}">Contactanos</a>
                 </li>
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('register')}}">Registro</a>
+                        <a class="nav-link text-white " href="{{route('register')}}">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('login')}}">Ingreso</a>
+                        <a class="nav-link text-white " href="{{route('login')}}">Ingreso</a>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a href="#"class="nav-link" data-toggle="modal" data-target="#modalLogout">
-                            <i class="fa fa-sign-out-alt"></i>
+                        <a href="#"class="nav-link text-white " data-toggle="modal" data-target="#modalLogout">
+                            <i class="fa fa-sign-out"></i>
                             <span class="d-none d-sm-inline">Salir</span>
                         </a>
                     </li>
                 @endguest
                 {{--<li class="nav-item dropdown">--}}
-                    {{--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                    {{--<a class="nav-link text-white  dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
                         {{--Blog--}}
                     {{--</a>--}}
                     {{--<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">--}}

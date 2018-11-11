@@ -14,6 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('css/modern-business.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
 
     <!-- Css para cada modulo o pagina -->
     @stack('css')
