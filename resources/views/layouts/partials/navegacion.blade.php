@@ -33,7 +33,7 @@
                         </li>
                     @else
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-white " href="{{route('contenidos')}}">Contenidos</a>
+                            <a class="nav-link text-white " href="{{route('contenidos.index')}}">Contenidos</a>
                         </li>
                     @endif
 
