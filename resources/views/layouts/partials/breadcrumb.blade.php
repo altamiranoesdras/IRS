@@ -4,3 +4,5 @@
     </li>
     <li class="breadcrumb-item active">{{$slot}}</li>
 </ol>
+
+@include('flash::message')
