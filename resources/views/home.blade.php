@@ -124,18 +124,16 @@
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-6">
-                <h2>Modern Business Features</h2>
-                <p>The Modern Business template by Start Bootstrap includes:</p>
+                <h2>Tipos De Redes Sociales.</h2>
+                <p>Establece como criterio único para clasificar las redes sociales su objetivo, dentro de las cuales define:</p>
                 <ul>
                     <li>
-                        <strong>Bootstrap v4</strong>
+                        Redes sociales de carácter personal, como Facebook, Twitter o MySpace.
                     </li>
-                    <li>jQuery</li>
-                    <li>Font Awesome</li>
-                    <li>Working contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
+                    <li>Redes sociales de tipo Profesionales, como LinkedIn, Xiang, Viadeo.</li>
+                    <li>Redes sociales temáticos dentro de las cuales están cuantatuviaje.net o Musicmakesrieds.com</li>
+                    <li>Redes sociales de Escala local, como Tuenti, Hyves o Xianoei </li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
             </div>
             <div class="col-lg-6">
                 <img class="img-fluid rounded" src="{{asset('img/9.jpeg')}}" alt="">

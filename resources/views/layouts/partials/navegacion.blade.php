@@ -61,7 +61,7 @@
                 @else
                     <li class="nav-item">
                         <a href="#"class="nav-link text-white " data-toggle="modal" data-target="#modalLogout">
-                            <i class="fa fa-sign-out"></i>Salir
+                            <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>
                 @endguest
