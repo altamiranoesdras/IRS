@@ -18,7 +18,6 @@
         <div class="row">
 
             <div class="col-md-8">
-                <h3 class="my-3">Description</h3>
                 <p>
                     {!! $contenido->cuerpo !!}
                 </p>
