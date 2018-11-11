@@ -68,7 +68,7 @@
                 <div class="card h-100">
                     <h4 class="card-header">{{$cont->titulo}}</h4>
                     <div class="card-body">
-                        <p class="card-text">{{$cont->extracto}}</p>
+                        <p class="card-text">{!! $cont->extracto !!}</p>
                     </div>
                     <div class="card-footer">
                         <a href="{{route('contenidos.show',$cont->id)}}" class="btn btn-primary">Leer mas</a>
@@ -102,7 +102,7 @@
                             <a href="{{route('posts.show',$post->id)}}">{{$post->titulo}}</a>
                         </h4>
                         <p class="card-text">
-                            {{$post->extracto}}
+                            {!! $post->extracto !!}
                         </p>
                     </div>
                 </div>

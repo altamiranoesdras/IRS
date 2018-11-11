@@ -1,13 +1,15 @@
 
 <!-- Navigation -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar  text-white navbar-expand-lg navbar-dark bg-success fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{route('home')}}">{{config('app.name')}}</a>
+        <a class="navbar-brand" href="{{route('home')}}">
+            <b>{{config('app.name')}}</b>
+        </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse float-left" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto font-weight-bold" style="color: white !important;">
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('about')}}">Acerca de</a>
                 </li>
